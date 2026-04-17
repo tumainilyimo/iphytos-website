@@ -1,0 +1,139 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  html, body {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-nunito text-neutral-dark bg-white text-base antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+  
+  /* Custom scrollbar styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/40 rounded-full transition-colors;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/60;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  /* Custom classes */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-center font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light focus-visible:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-neutral-dark hover:bg-secondary-light focus-visible:ring-secondary;
+  }
+
+  .btn-tertiary {
+    @apply bg-tertiary text-white hover:bg-tertiary-light focus-visible:ring-tertiary;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-fluid {
+    @apply w-full px-4 md:px-8 lg:px-16 mx-auto;
+  }
+
+  .navbar-link {
+    @apply relative font-medium text-neutral-dark hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .navbar-link.active {
+    @apply text-primary after:scale-x-100;
+  }
+
+  .shadow-card {
+    @apply shadow-medium transition-shadow duration-300 hover:shadow-card-hover;
+  }
+
+  /* Card 3D hover effect */
+  .card-3d {
+    @apply transition-all duration-300 ease-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .card-3d-content {
+    @apply transition-transform duration-300 ease-out;
+  }
+
+  .card-3d:hover .card-3d-content {
+    transform: translateZ(20px);
+  }
+}

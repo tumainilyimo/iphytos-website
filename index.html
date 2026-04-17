@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhytos | Redefining Medicine Through Nature & Science</title>
+    <meta name="description" content="At iPhytos, we harness the power of biophysics, AI, and nature to design life-saving medicines that are better, safer, and more precise." />
+    <meta name="author" content="iPhytos" />
+
+    <meta property="og:title" content="iPhytos | Redefining Medicine Through Nature & Science" />
+    <meta property="og:description" content="At iPhytos, we harness the power of biophysics, AI, and nature to design life-saving medicines that are better, safer, and more precise." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/iphytos-logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@iphytos" />
+    <meta name="twitter:image" content="/iphytos-logo.png" />
+    
+    <!-- Resource hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="preload" href="/iphytos-logo.png" as="image" type="image/webp" />
+    
+    <!-- Load fonts with display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Favicons -->
+    <link rel="icon" href="/iphytos-logo.png" type="image/webp">
+    <link rel="apple-touch-icon" href="/iphytos-logo.png" type="image/webp">
+    <link rel="shortcut icon" href="/iphytos-logo.png" type="image/webp">
+
+    <!-- Inline critical CSS -->
+    <style>
+      /* Add your critical CSS here */
+      body { margin: 0; }
+      #root { min-height: 100vh; }
+      img { max-width: 100%; height: auto; }
+    </style>
+
+    <script>
+      // Service Worker Cleanup
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
+    <script type="module" src="/src/main.tsx" defer></script>
+  </body>
+</html>
