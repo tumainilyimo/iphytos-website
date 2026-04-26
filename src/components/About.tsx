@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import FeatureCard from "./FeatureCard";
+import ReceptorDocking from "./animations/ReceptorDocking";
 
 // Types for motion components
 type MotionDivProps = HTMLMotionProps<"div">;
@@ -651,6 +652,9 @@ const About: FC = () => {
         ref={bgRef} 
         className="absolute inset-0 pointer-events-none overflow-hidden will-change-transform"
       >
+        {/* Receptor-pocket docking animation */}
+        <ReceptorDocking />
+        
         {/* Decorative circles */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl opacity-60" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-tertiary/5 blur-3xl opacity-70" />
